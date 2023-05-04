@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class GroundScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float groundHeight;
+    BoxCollider2D collider;
+    
+    private void Awake()
     {
-        
+        collider = GetComponent<BoxCollider2D>();
+        groundHeight = transform.position.y + (collider.size.y / 2);
     }
 
     // Update is called once per frame

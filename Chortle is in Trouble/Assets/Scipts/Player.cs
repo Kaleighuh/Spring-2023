@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
             RaycastHit2D hit2D = Physics2D.Raycast(rayOrigin, rayDirection, rayDistance);
             if (hit2D.collider != null)
             {
-                Ground ground = hit2D.collider.GetComponent<Ground>();
+                GroundScript ground = hit2D.collider.GetComponent<GroundScript>();
                 if (ground != null)
                 {
                     groundHeight = ground.groundHeight;

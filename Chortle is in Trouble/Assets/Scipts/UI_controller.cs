@@ -11,7 +11,7 @@ public class UI_controller : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
-        distanceText = GameObject.Find("Distance Text").GetComponent<Text>();
+        //distanceText = GameObject.Find("Distance Text").GetComponent<Text>();
     }
     void Start()
     {
@@ -19,7 +19,7 @@ public class UI_controller : MonoBehaviour
     }
     void Update()
     { 
-        //int distance = Mathf.FloorToInt(player.distance);
+        int distance = Mathf.FloorToInt(player.distance);
         //distanceText.text = distance + " m";
     }
 }
